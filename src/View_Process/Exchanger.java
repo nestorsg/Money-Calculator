@@ -16,6 +16,7 @@ public class Exchanger {
     public Money getMoney(){
         return new Money (getExchange(), exchangeRate.getTo());
     }
+    
     public double getExchange() {
         return total * exchangeRate.getRate();
     }    

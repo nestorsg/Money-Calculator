@@ -1,5 +1,10 @@
 package View_UI;
 
-public class MoneyDisplay {
+import Model.Money;
 
+public interface MoneyDisplay {
+
+    public void showMoney(Money money);
+    
+    public void reset();
 }

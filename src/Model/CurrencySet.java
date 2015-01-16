@@ -1,22 +1,27 @@
 package Model;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Map;
+import java.util.List;
 
-public class CurrencySet implements Iterable  {
-    private final Map<String,Currency> currencySet;
+public class CurrencySet implements Iterable<Currency>  {
+    
+    private final List<Currency> currencyList;
 
     public CurrencySet() {
-        this.currencySet = new HashMap<>();
-    }
-
-       @Override
-    public Iterator iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.currencyList = new ArrayList<>();
     }
     
     public void add (Currency currency){
-        currencySet.put(currency.getCode(), currency);
+        currencyList.add(currency);
+    }
+    
+    public Currency [] getItems(){
+        return currencyList.toArray(new Currency[currencyList.size()]);
+    }
+    
+       @Override
+    public Iterator iterator() {
+        return currencyList.iterator();
     }
 }

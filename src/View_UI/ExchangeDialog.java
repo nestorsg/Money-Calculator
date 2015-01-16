@@ -1,7 +1,10 @@
 package View_UI;
 
-public class ExchangeDialog {
+import Model.Exchange;
 
-    public void execute() {
-    }
+public interface ExchangeDialog {
+
+    public Exchange getExchange();
+    
+    public void reset();
 }
